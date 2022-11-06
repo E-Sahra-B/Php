@@ -1,0 +1,4 @@
+es | as@as | 1234567890
+aaa | as@as | 1234567890
+esb | as@as | 1234567890
+Gerçek veri | blank@blank.com | 1234567890
