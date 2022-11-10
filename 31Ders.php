@@ -10,6 +10,17 @@
 
 <body>
     <h3>SQL Dili, Veritabani ve Tablo işlem Komutlari</h3>
+    <br>✯ SQL Dili
+    <br>✯ Temel SQL Komutları
+    <br>✯ SQL ile Veritabanı Oluşturma (Create Database)
+    <br>✯ SQL ile Veritabanı Seçme (Use)
+    <br>✯ SQL ile Veritabanı Silme (Drop Database)
+    <br>✯ SQL ile Tablo Oluşturma (Create Table)
+    <br>✯ SQL ile Tablo Adını Değiştirme (Rename Table)
+    <br>✯ SQL ile Tablolarda Yapısal Değişiklikler (Alter Table)
+    <br>✯ SQL ile Tablo İçini Boşaltma (Truncate Table)
+    <br>✯ SQL ile Tablo Sorunlarını Giderme (Repair Table)
+    <br>✯ SQL ile Tablo Silme (Drop Table)
     <hr>
     <h4>VERİTABANI OLUŞTURMA</h4>
     <br>CREATE DATABASE egitim

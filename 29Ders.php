@@ -10,6 +10,9 @@
 
 <body>
     <h3>Veritabanina Giriş, Veritabanlari, Tablolar, Alanlar </h3>
+    <br>✯ Veritabanına Giriş
+    <br>✯ Veritabanı, Tablo ve Alan Yapıları
+    <br>✯ MySQL Veri Türleri (Metin, Tam Sayı, Ondalık Sayı, Zaman)
     <hr>
     <h4>Metin Veri Tipleri</h4>
     <table>

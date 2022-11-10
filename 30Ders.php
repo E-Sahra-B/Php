@@ -10,7 +10,8 @@
 
 <body>
     <h3>PHPMyAdmin Veritabani Yönetim Sistemi Kullanimi</h3>
-
+    <br>✯ Veritabanı Yönetim Sistemleri
+    <br>✯ PHPMyAdmin Kullanımı
     <hr>
     <?php
     ?>
