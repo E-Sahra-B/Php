@@ -19,7 +19,7 @@
     <hr>
 
     <?php
-    // $xml = new DOMDocument("1.0", "UTF-8"); //<?xml version="1.0" encoding="UTF-8" ? >
+    //$xml = new DOMDocument("1.0", "UTF-8"); //<?xml version="1.0" encoding="UTF-8" ? >
     // $ogrenciler = $xml->createElement("ogrenciler"); //<ogrenciler></ogrenciler>
     // $xml->appendChild($ogrenciler); //sayfaya ekleme
 
@@ -65,9 +65,39 @@
     // echo $xml->saveXML(); //php de görünlemek için
     // //1esmabalcı
 
-    $xml = new DOMDocument();
-    $xml->load("ogrenciler.xml");
-    echo $xml->saveHTML();
+    // $xml = new DOMDocument();
+    // $xml->load("ogrenciler.xml");
+    // echo $xml->saveXML();
+
+    // $dosya = file_get_contents("http://localhost/php/php/41ders/ogrenciler.xml");
+    // $xml = new DOMDocument();
+    // $xml->loadXML($dosya);
+    // echo $xml->saveXML();
+
+    // $xml = new DOMDocument();
+    // $xml->load("ogrenciler.xml");
+    // $ogrenciler = $xml->getElementsByTagName("ogrenci");
+    // // foreach ($ogrenciler as $ogrenci) {
+    // //     echo $ogrenci->nodeValue . "<br>";
+    // // }
+    // foreach ($ogrenciler as $ogrenci) {
+    //     echo $ogrenci->getElementsByTagName("ad")[0]->nodeValue . "/" . $ogrenci->getElementsByTagName("ad")[0]->nodeValue . "<br>";
+    // }
+
+    $xml = simplexml_load_file("ogrenciler.xml");
+    $json = json_encode($xml);
+    $dizi = json_decode($json);
+
+    // var_dump($dizi); //xml i dizi ye çavirdik
+
+    // foreach ($dizi["ogrenci"] as $icerik) {
+    foreach ($dizi[0] as $icerikler) {
+        foreach ($icerikler as $icerik) {
+            echo "$icerik -";
+        }
+        echo "<br>";
+    }
+
     ?>
 </body>
 
