@@ -1,0 +1,1 @@
+Merhaba bu bir metin dosyasının içeriğidir ve kurucu/yıkıcı metotlat için kullanılmaktadır.
