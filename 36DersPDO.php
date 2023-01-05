@@ -25,6 +25,15 @@
     $baglan = new PDO("mysql:host=localhost;dbname=deneme;charset=utf8", "Sahra", "1234");
     $baglan->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //Hata kontrol 
 
+    try {
+        $baglan = new PDO("mysql:host=localhost;dbname=deneme;charset=utf8", "Sahra", "1234");
+        $baglan->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $baglan->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        die("Sunucu Hatası: " . $e->getMessage());
+    }
+
+
     //$sorgu = $baglan->query("select * from ogrenciler where id=2")->fetch(PDO::FETCH_ASSOC);
 
     //$sorgu = $baglan->query("select * from ogrenciler where id=2");
@@ -58,6 +67,18 @@
     // }
     // echo $sorgu->rowCount(); //kaç kayıt geldiğini görmek için kullanılır
 
+    // $cek = $baglan->prepare("SELECT * FROM kullanici WHERE kullaniciAdi =:kAdi");
+    // $cek->execute(array('kAdi' => $_SESSION['adSoyad']));
+    // $satir = $cek->fetch(PDO::FETCH_ASSOC);
+    // extract($satir);
+    //<?php echo $kullaniciAdi; ? >
+
+    // $kAdi = $_SESSION['adSoyad'];
+    // $cek = $baglan->prepare("SELECT * FROM kullanici WHERE kullaniciAdi =:kAdi");
+    // $cek->execute(array('kAdi' => $kAdi));
+    // $satir = $cek->fetch(PDO::FETCH_ASSOC);
+    // extract($satir); //<?php echo $kullaniciAdi; ? >
+
     //kayıt Ekleme
     // $sorgu = $baglan->prepare("insert into ogrenciler values(?,?,?,?,?)");
     // $ekle = $sorgu->execute(array(NULL, "Esma Sahra Balcı", "12345678901", "12345678901", "aktif"));
@@ -73,6 +94,12 @@
     // if ($guncelle) {
     //     echo "Güncelleme Başarılı";
     // }
+    // $sorgu = $baglan->prepare("update ogrenciler set adSoyad=?, telefon=? where id=?");
+    // $guncelle = $sorgu->execute(array("Esma Sahra Balcı","1234567890", "2"));
+    // if ($guncelle) {
+    //     echo "Güncelleme Başarılı";
+    // }
+
 
     //Kayıt Silme
     // $sorgu = $baglan->prepare("delete from ogrenciler where id=?");
